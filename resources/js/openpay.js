@@ -12,9 +12,9 @@
         });
 
         var sucess_callbak = function(response) {
-          var token_id = response.data.id;
-          $('#token_id').val(token_id);
-          $('#payment-form').submit();
+            var token_id = response.data.id;
+            $('#token_id').val(token_id);
+            $('#payment-form').submit();
         };
 
         var error_callbak = function(response) {
