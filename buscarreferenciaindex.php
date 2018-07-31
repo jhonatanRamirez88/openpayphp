@@ -3,10 +3,20 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-   <link href="/openpayphp/resources/css/style.css" rel="stylesheet" type="text/css"  />
+   <link href="/openpay/resources/css/style.css" rel="stylesheet" type="text/css"  />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
     <div class="bkng-tb-cntnt">
+        <?php 
+            if(isset($_GET["mensaje"])){?>
+              <div class="alert alert-success alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong><?php echo $_GET["mensaje"]; ?></strong>
+              </div>
+        <?php
+            }
+        ?>
         <div class="pymnts">
             <form action="buscarreferencia.php" method="POST" id="payment-form">
                 <input type="hidden" name="token_id" id="token_id">
@@ -19,14 +29,13 @@
                         </div>
                         <div class="sctn-row">
                             <div class="sctn-col l">
-                                <label>Número de referencía</label><input type="text" placeholder="Número de referencía" autocomplete="off" name="numero_referencia" data-openpay-card="numero_referencia">
+                                <label>Número de referencía</label><input type="text" placeholder="Número de referencía" autocomplete="off" name="numero_referencia" >
+                            </div>
+                            <div class="sctn-row" style="width: 40%">
+                                <a class="button rght" id="pay-button">Buscar</a>
                             </div>
                             <div class="openpay"><div class="logo">Transacciones realizadas vía:</div>
                             <div class="shield">Tus pagos se realizan de forma segura con encriptación de 256 bits</div>
-                        </div>
-                        <div class="sctn-row">
-                            <input type="submit" value="Buscar"/>
-                            <!--a class="button rght" id="pay-button">Buscar</a-->
                         </div>
                     </div>
                 </div>
@@ -34,14 +43,14 @@
         </div>
     </div>
 
-    <!--script>
+    <script>
           $(document).ready(function() {
             $('#pay-button').on('click', function(event) {
                 event.preventDefault();
                 $("#pay-button").prop( "disabled", true);
-                OpenPay.token.extractFormAndCreate('payment-form', sucess_callbak, error_callbak);
+                $('#payment-form').submit();
             });
           });
-    </script-->
+    </script>
 </body>
 </html>

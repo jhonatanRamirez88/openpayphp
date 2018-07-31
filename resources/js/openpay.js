@@ -1,5 +1,7 @@
     $(document).ready(function() {
+        //clabe id
         OpenPay.setId('m4nfgskfrdp587hw8pi5');
+        //llave publica
         OpenPay.setApiKey('pk_2b0b767fc88b43e79b8d5a55c42f923e');
         OpenPay.setSandboxMode(true);
         //Se genera el id de dispositivo

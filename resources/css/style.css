@@ -103,6 +103,12 @@ a.button.disabled {
     float: left;
 }
 
+.sctn-row-full{
+    margin-bottom: 35px;
+    background-color: blue;
+    width: 800px;
+}
+
 .sctn-row {
     margin-bottom: 35px;
     width: 800px;
@@ -111,6 +117,9 @@ a.button.disabled {
     width: 375px;
 }
 .sctn-col.l {
+    width: 425px;
+}
+.sctn-col.l2 {
     width: 425px;
 }
 .sctn-col input {
@@ -252,4 +261,29 @@ a.button.disabled {
 .card-expl h4 {
     font-weight: 400;
     margin: 0;
+}
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
 }
