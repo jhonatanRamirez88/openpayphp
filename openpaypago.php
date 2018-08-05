@@ -18,5 +18,5 @@
     );
 	$charge = $openpay->charges->create($chargeData);
 	$mensaje = "Operación realizada éxitosamente";
-	header('Location: http://localhost/openpay/buscarreferenciaindex.php?mensaje='.$mensaje);
+	header('Location: http://localhost:8080/openpay/buscarreferenciaindex.php?mensaje='.$mensaje);
 ?>
