@@ -16,6 +16,8 @@
         var sucess_callbak = function(response) {
             var token_id = response.data.id;
             $('#token_id').val(token_id);
+            var nombre = response.data.card.holder_name;
+            $('#nombre').val(nombre);
             if (response.data.card.points_card) {
                  // Si la tarjeta permite usar puntos, mostrar el cuadro de diálogo
                  $("#card-points-dialog").modal("show");

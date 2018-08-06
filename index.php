@@ -20,7 +20,11 @@
     <div class="bkng-tb-cntnt">
         <div class="pymnts">
             <form action="openpaypago.php" method="POST" id="payment-form">
+                <input type="hidden" name="use_card_points" id="use_card_points">
                 <input type="hidden" name="token_id" id="token_id">
+                <input type="hidden" name="monto" id="monto" value="<?php echo $_GET['monto'] ?>">
+                <input type="hidden" name="descripcion" id="descripcion" value="<?php echo $_GET['descripcion'] ?>">
+                <input type="hidden" name="nombre" id="nombre" value="">
                 <div class="pymnt-itm card active">
                     <h2>Tarjeta de crédito o débito</h2>
                     <div class="pymnt-cntnt">
@@ -39,12 +43,12 @@
                         <div class="sctn-row">
 
                             <div class="sctn-col l" style="width: 100%;">
-                                 <label>Descripción</label><input type="text" style="width: 95%" name="monto" value="<?php echo $_GET['descripcion'] ?>" disabled="true">
+                                 <label>Descripción</label><input type="text" style="width: 95%" name="descripcion" value="<?php echo $_GET['descripcion'] ?>" disabled="true">
                             </div>
                         </div>
                         <div class="sctn-row">
                             <div class="sctn-col" style="width: 100%;">
-                                <label>Dirección</label><input type="text" style="width: 95%;" name="monto" value="<?php echo $_GET['direccion'] ?>" disabled="true">
+                                <label>Dirección</label><input type="text" style="width: 95%;" name="direccion" value="<?php echo $_GET['direccion'] ?>" disabled="true">
                             </div>
                         </div>
                         <div class="sctn-row">
