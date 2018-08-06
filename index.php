@@ -20,7 +20,6 @@
     <div class="bkng-tb-cntnt">
         <div class="pymnts">
             <form action="openpaypago.php" method="POST" id="payment-form">
-                <input type="hidden" name="use_card_points" id="use_card_points">
                 <input type="hidden" name="token_id" id="token_id">
                 <input type="hidden" name="monto" id="monto" value="<?php echo $_GET['monto'] ?>">
                 <input type="hidden" name="descripcion" id="descripcion" value="<?php echo $_GET['descripcion'] ?>">

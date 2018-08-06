@@ -10,7 +10,6 @@
         'method' => 'card',
         'source_id' => $_POST["token_id"],
     	'amount' => (float)$_POST["monto"],
-		'use_card_points' => $_POST["use_card_points"], // Opcional, si estamos usando puntos
         'description' => $_POST["descripcion"],
         'device_session_id' => $_POST["deviceIdHiddenFieldName"],
         'customer' => $customerData//Dato requerido
